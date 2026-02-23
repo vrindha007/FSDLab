@@ -82,38 +82,36 @@
 
 function addTask() {
 
-    // 1. Get input value
+
     let taskText = document.getElementById("taskInput").value;
 
-    // Prevent empty tasks
+  
     if (taskText === "") {
         alert("Please enter a task!");
         return;
     }
 
-    // 2. Create new list item
+
     let li = document.createElement("li");
 
-    // 3. Add text to li
+
     li.textContent = taskText;
 
-    // 4. Create delete button
     let deleteBtn = document.createElement("button");
     deleteBtn.textContent = "×";
     deleteBtn.className = "delete-btn";
 
-    // 5. When delete button clicked → remove that task
+
     deleteBtn.onclick = function () {
         li.remove();
     };
 
-    // 6. Add button inside li
+
     li.appendChild(deleteBtn);
 
-    // 7. Add li to ul
     document.getElementById("taskList").appendChild(li);
 
-    // 8. Clear input box
+
     document.getElementById("taskInput").value = "";
 }
 
@@ -121,3 +119,4 @@ function addTask() {
 
 </body>
 </html>
+
